@@ -4,17 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <title>motiondog</title>
+    <title>CATch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <nav class="nav">
 
+            <div class="nav__logo-container">
+                <h2> < </h2>
+                <img class="nav__logo" src="./Assets/imgs/logo.png" alt="logo gato webcatch">
+                <p class="nav__logo-text">CATch</p>
+                <h2> > </h2>
+            </div>
+           
+            <label for="menu-burger" class="nav__label">
+                <img src="./Assets/icons/burger.svg" alt="">
+            </label>
+            <input type="checkbox" name="" id="menu-burger" class="nav__input">
+
+            <ul class="nav__menu">
+                <a href="">Inicio</a>
+                <a href="">Proyectos</a>
+                <a href="">Contacto</a>
+                <a href="">¿Quiénes Somos?</a>
+            </ul>
+
+        </nav>
+        <section class="inicio">
+            <div class="inicio__img"><h1> Eslogans </h1> </div>
+        </section>
+        <hr>
     </header>
     <main>
-
+        <section class="proyectos">
+            <div><h2>PROYECTOS</h2></div>
+            <section class="proyectos-container">
+                <article class="proyectos__cuadros"></article>
+                <article class="proyectos__cuadros"></article>
+                <article class="proyectos__cuadros"></article>
+            </section>
+        </section>
+        <section class="contacto">
+            <hr class="contacto-separador"> </hr>
+            <div class="contacto__titulo">
+                <h2>CONTACTO</h2>
+            </div>
+            <div class="contacto__chat-contenedor">
+                <div class="contacto__chat-contenedor-img">          
+                    <div class="contacto__texto-contenedor">
+                        <h3>Chatea con nosotros</h3>
+                        <p>Estamos disponibles para atender tus solicitudes por chat de WhatsApp y correo electrónico, da clic en la opción que desees.</p>
+                    </div>
+                    <div class="contacto--contenedor-resize"> 
+                        <div class="contacto__chat-verde">
+                            <p>Hola! Quiero una pagina web.</p>
+                        </div>
+                        <div class="contacto__chat-blanco"> 
+                            <p>Hola, buenas tardes :3</p>
+                        </div>
+                        <div class="contacto__chat-blanco">
+                            <p>Con gusto! Cuéntanos qué 
+                                quieres hacer y te ayudaremos.</p>
+                        </div>
+                        <div class="contacto__chat-verde">
+                            <p>Genial! Muchas gracias c:</p>
+                        </div>
+                        <div class="contacto__chat-verde-recorte">
+                            <p>Quiero crear una pagina...</p>
+                        </div>
+                        <div class="contacto__boton-container">
+                            <div class="contacto-boton-container__boton">
+                                <a href="">INICIAR CHAT</a>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="contacto-correo">
+                <div class="contacto-correo__icono"></div>
+                <div class="contacto-correo__boton">
+                    <a class="contacto-correo__boton-1" href="">Correo</a> 
+                    <a class="contacto-correo__boton-2" href="">Contacto por correo</a>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="quienes-somos">
+            <section class="quienes-somos__container">
+                <div class="quienes-somos__rombo"><h2>¿Quiénes Somos?</h2></div>
+            </section>
+            <div class="quienes-somos__rombo-mobile">
+                <img src="/Assets/imgs/Quienes somos white 2.png" alt="">
+            </div>
+            <article class="quienes-somos__text">
+                <h2 class="quienes-somos__title-mobile">¿Quiénes Somos?</h2>
+                <p>En &lt;CATch&gt; somos una empresa de desarrollo web con una pasión especial por los gatos. creamos soluciones web personalizadas que combinan diseño atractivo, funcionalidad intuitiva y rendimiento sólido. 
+                Trabajamos en estrecha colaboración contigo para entender tus objetivos y transformar tus ideas en una presencia en línea excepcional.</p>
+            </article>
+        </section>
+        <hr>
     </main>
+    
     <footer>
-
+        <section class="socials">
+            <ul class="socials-container">
+                <li class="socials__wasap"><img src="/Assets/icons/Whatsapp.png" alt=""></li>
+                <li class="socials__email"><img src="/Assets/icons/email.png" alt=""></li>
+                <li class="socials__linkedin"><img src="/Assets/icons/linkedin.png" alt=""></li>
+            </ul>
+        </section>
+            <div class="footer-logo-container">
+            <h2> < </h2>
+            <img class="footer__logo" src="/Assets/imgs/logo.png" alt="logo gato webcatch">
+            <h2> > </h2>
+        </div>
+        <section class="footer-menu">
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Proyectos</a></li>
+            <li><a href="">Contacto</a></li>
+            <li><a href="">¿Quiénes Somos?</a></li>
+        </section>
     </footer>
 </body>
 </html>

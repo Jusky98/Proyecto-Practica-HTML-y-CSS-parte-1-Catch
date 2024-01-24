@@ -1,0 +1,837 @@
+/* Variables */
+:root { 
+    /* colores */
+    --dark-gray: #33312E;
+    --light-gray: #AFAEAE;
+    --almost-white: #FFFBE7; 
+    --black: #151A1D;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Lexend Giga', sans-serif;
+}
+
+header {
+    background-color: var(--dark-gray);
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+******************************  NAVBAR *****************************************
+///////////////////////////////////////////////////////////////////////////// */
+.nav {
+    width: 100%;
+    height: 117px;
+    background-color: var(--dark-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+/* LOGO */
+.nav__logo-text {
+    display: none;
+}
+.nav__logo-container {
+    display: flex;
+    padding-left: 3%;
+}
+
+.nav__logo-container h2 {
+    color: var(--almost-white);
+    font-family: "Lexend Giga";
+    font-size: 54px;
+    font-weight: 300;
+}
+
+.nav__logo {
+    width: 80px;
+    height: 85px;
+    flex-shrink: 0;
+}
+
+/*MENU BURGER*/
+.nav__label {
+    padding-right: 5%;
+    cursor: pointer;
+}
+.nav__label img {
+    width: 52px;
+    height: 27px;
+    flex-shrink: 0;
+}
+
+.nav__menu, .nav__input {
+    display: none;
+}
+
+.nav__menu {
+    position:fixed;
+    top: 110px;
+    bottom: 0;
+    background-color: var(--dark-gray);
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(0 at center);
+    transition: clip-path 1s ease-in-out;
+    z-index: 1;
+}
+
+.nav__input:checked + .nav__menu {
+    clip-path: circle(100% at center);
+}
+
+.nav__menu a {
+    text-decoration: none;
+    color: var(--almost-white);
+    text-align: center;
+    font-family: "Lexend Giga";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+******************************  INICIO *****************************************
+///////////////////////////////////////////////////////////////////////////// */
+
+.inicio{
+    width: 100%;
+    height: 919px;
+    background-image: url(./Assets/icons/bg.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    z-index: 0;
+    margin-bottom: 5%;
+}
+
+.inicio h1 {
+    color: var(--almost-white);
+    font-family: "Lexend Giga";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-shadow: var(--black) 5px 05px;
+}
+
+hr {
+    width: 90%;
+    height: 5px;
+    margin: 0 auto;
+    background-color: var(--almost-white);
+    border-radius: 50px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+******************************  MAIN *****************************************
+///////////////////////////////////////////////////////////////////////////// */
+
+main {
+    width: 100%;
+    height: auto;
+    background-color: var(--dark-gray);
+}
+/* /////////////////////////////////////////////////////////////////////////////
+******************************  PROYECTOS *****************************************
+///////////////////////////////////////////////////////////////////////////// */
+
+.proyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0% 10% 0%;
+}
+
+.proyectos h2 {
+    color: #FFFBE7;
+    font-feature-settings: 'liga' off;
+    font-family: Lexend Giga;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 11px;
+}
+
+.proyectos__cuadros {
+    margin: 50px 0px 50px 0px;
+    min-width: 280px;
+    min-height: 290px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.58) 0%, rgba(0, 0, 0, 0.00) 100%);
+    opacity: 0.5;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+******************************  CONTACTO *****************************************
+///////////////////////////////////////////////////////////////////////////// */
+
+.contacto {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+    text-align: center;
+    background-color: #33312E;
+    
+}
+
+.contacto-separador {
+    width: 90%;
+    height: 5px;
+    margin: 0 auto;
+    background-color: var(--almost-white);
+    border-radius: 50px;
+}
+
+.contacto__titulo {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto h2 {
+    color: #FFFBE7;
+    font-feature-settings: 'liga' off;
+    font-family: Lexend Giga;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 15px;
+}
+
+.contacto__chat-contenedor {
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+    border-radius: 22px;
+    background: url('/Assets/imgs/chat_bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contacto__chat-contenedor-img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contacto--contenedor-resize {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto__texto-contenedor {
+    display: none;
+}
+
+.contacto__chat-verde {
+    align-self: flex-end;
+    width: 321px;
+    height: 80px;
+    background-image: url('/Assets/imgs/chat-verde.png');
+    transform: scaleX(-1);
+    background-position: center;
+    background-size: 321px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.contacto__chat-verde p {
+    transform: scaleX(-1);
+    padding-top: 20px;
+    padding-left: 28px;
+    color: #000;
+    font-family: 'Lexend Giga', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22.703px;
+}
+
+.contacto__chat-blanco {
+    align-self: flex-start;
+    width: 321px;
+    height: 80px;
+    background-image: url('/Assets/imgs/chat-blanco.png');
+    background-position: center;
+    background-size: 321px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    padding-top: 20px;
+}
+
+.contacto__chat-blanco p {
+    padding-left: 40px;
+    padding-bottom: 10px;
+    color: #000;
+    font-family: 'Lexend Giga', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22.703px;
+}
+
+.contacto__chat-blanco:nth-of-type(3) p {
+    font-size: 11px;
+    padding: 5px 30px 10px 40px;
+}
+
+.contacto__chat-verde-recorte {
+    align-self: flex-end;
+    padding-top: 0px;
+    width: 321px;
+    height: 60px;
+    background-image: url('/Assets/imgs/chat-verde.png');
+    transform: scaleX(-1);
+    background-position: center;
+    background-size: 321px;
+    background-position-y:-50px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: right
+}
+
+.contacto__chat-verde-recorte p {
+    transform: scaleX(-1);
+    padding-top: 40px;
+    padding-left: 28px;
+    color: #000;
+    font-family: 'Lexend Giga', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22.703px;
+}
+
+.contacto__boton-container {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contacto-boton-container__boton {
+    margin: 0 auto;
+    width: 188px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: #D7FAD1;
+    box-shadow: 6px 8px 4px 0px rgba(0, 0, 0, 0.65);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contacto-boton-container__boton a {
+    text-align: center;
+    color: #000;
+    padding: 10px;
+    /* bubble shadow */
+    font-family: Lexend Giga;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 119.49%; /* 23.898px */
+    letter-spacing: -2.1px;
+    text-decoration: none;
+}
+
+/* Icono correo y boton */ 
+
+.contacto-correo {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+}
+
+.contacto-correo__icono {
+    width: 72px;
+    height: 60px;
+    flex-shrink: 0;
+    background: url('/Assets/imgs/correo-icono.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contacto-correo__boton {
+    width: 140px;
+    height: 47px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto-correo__boton-1 {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
+    font-family: Lexend Giga;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 119.49%; /* 23.898px */
+    letter-spacing: -1.7px;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+}
+
+.contacto-correo__boton-2 {
+    display: none;
+}
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////
+****************************** QUIENES SOMOS*****************************************
+///////////////////////////////////////////////////////////////////////////// */
+
+.quienes-somos__container {
+    width: 100%;
+    height: 261px;
+    background: #151A1D;
+}
+.quienes-somos__rombo-mobile {
+    position: absolute;
+    left: calc(50% - 100.5px);
+    top: calc(100% + 2320px);
+    width: 187.025px;
+    height: 183.62px;
+    transform: rotate(34.895deg);
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #807B74;
+    overflow: hidden;
+}
+
+.quienes-somos__rombo-mobile img {
+    transform: rotate(-25.895deg);
+    position: relative;
+    right: 25px;
+    bottom: 10px;
+}
+.quienes-somos__rombo {
+    display: none;
+}
+
+.quienes-somos__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-top: 150px;
+}
+
+.quienes-somos__text p {
+    color: #FFF;
+    text-align: center;
+    font-family: "Lexend Giga";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 3.1px;
+    padding: 41px;
+}
+
+.quienes-somos__title-mobile {
+    color: #FFFBE7;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Lexend Giga";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 20.64px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+******************************  FOOTER *****************************************
+///////////////////////////////////////////////////////////////////////////// */
+footer {
+    background-color: var(--dark-gray);
+    list-style: none;
+}
+
+.socials-container {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    padding: 40px 0px 10px 0px;
+}
+
+.footer-menu {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: var(--almost-white);
+    font-family: "Lexend Giga";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.footer-logo-container {
+    display: none;
+}
+/* /////////////////////////////////////////////////////////////////////////////
+******************************  MEDIA QUERIES *****************************************
+///////////////////////////////////////////////////////////////////////////// */
+
+@media only screen and (min-width: 640px) {
+
+    .nav__logo-text {
+        display: block;
+        color: #FFFBE7;
+        font-family: "Lexend Giga";
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 8%;
+    }
+    .nav__logo {
+        display: none;
+    }
+    /*MENU */
+    .nav__label{
+        display: none;
+    }
+    .nav__menu {
+        display: flex;
+        position: absolute;
+        flex-direction: row;
+        align-items: start;
+        clip-path: none;
+        transition: none;
+        width: 60%;
+        top: 40px;
+        bottom: 100%;
+        left: 40%;
+    }
+    .nav__menu a{
+        color: var(--almost-white);
+        font-family: "Lexend Giga";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        padding: 15px;
+    }
+
+    /*CONTACTO*/
+
+    .contacto__chat-contenedor {
+        margin: 0 auto;
+        padding-top: 50px;
+        width: 80%;
+        height: 100%;
+        border-radius: 40px;
+        background: url('/Assets/imgs/chat_bg.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+
+    .contacto--contenedor-resize {
+        width: 100%;
+        max-width: 768px;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contacto__texto-contenedor {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 320px;
+        height: 300px;
+        margin: 0 auto;
+    }
+    
+    .contacto__texto-contenedor h3{
+        color: #FFF;
+        text-align: center;
+        font-family: Lexend Giga;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 7.02px;
+    }
+
+    .contacto__texto-contenedor p{
+        color: #FFF;
+        text-align: center;
+        font-family: Lexend Giga;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .contacto-correo__boton {
+        width: 40%;
+        height: 47px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #FFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+
+    /*QUIENES SOMOS*/
+
+    .quienes-somos__container {
+        width: 100%;
+        height: 650px;
+        background: #151A1D;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .quienes-somos__rombo {
+        width: 329px;
+        height: 288px;
+        rotate: 50deg;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.58) 0%, rgba(0, 0, 0, 0.00) 100%);
+    }
+    
+    .quienes-somos__rombo h2{
+        display: block;
+        rotate: -50deg;
+        color: #FFFBE7;
+        text-align: center;
+        font-family: "Lexend Giga";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        letter-spacing: 20.96px;
+        text-transform: uppercase;
+    }
+    .quienes-somos__rombo-mobile {
+        display: none;
+    }
+
+    .quienes-somos__text {
+        padding-top: 20px;
+    }
+
+    .quienes-somos__title-mobile {
+        display: none;
+    }
+
+    .footer-logo-container {
+        display: flex;
+        justify-content: center;    
+        padding-top: 50px;
+    }
+    .footer__logo {
+        width: 120px;
+        height: 125px;
+    }
+
+    .footer-logo-container h2 {
+        color: var(--almost-white);
+        font-family: "Lexend Giga";
+        font-size: 84px;
+        font-weight: 300;
+    }
+
+}
+   
+
+@media only screen and (min-width: 1024px) {
+    /*PROYECTOS*/
+
+
+    .proyectos h2 {
+        display: flex;
+        padding-bottom: 10%;
+        letter-spacing: 31px
+    }
+
+    .proyectos-container {
+        display: flex;
+        
+    }
+    .proyectos__cuadros {
+        margin: 0px 10px 0px 20px;
+        max-width: 350px;
+        max-width: 350px;
+        
+    }
+
+    /*CONTACTO*/
+
+    .contacto h2 {
+        letter-spacing: 31px;
+    }
+
+    .contacto__chat-contenedor-img {
+        width: 100%;
+        max-width: 1504px;
+        height: 100%;
+        opacity: 0.8;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+    }
+
+    .contacto--contenedor-resize {
+        width: 100%;
+        max-width: 600px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contacto__texto-contenedor {
+        margin: auto 0;
+        align-self: center;
+        padding-left: 5%;
+        width:  450px;
+        margin-left: 5%;
+    }
+
+    .contacto__texto-contenedor h3{
+        text-align: left;
+        padding-bottom: 40px;
+    }
+    .contacto__texto-contenedor p{
+        text-align: left;
+    }
+
+    .contacto__titulo {
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+    }
+
+    .contacto__titulo h2 {
+        margin-left: 2%;
+    }
+
+    .contacto-correo {
+        width: 100%;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contacto-correo__boton {
+        max-width: 470px;
+    }
+
+    .contacto-correo__icono {
+        margin-right: 5%;
+    }
+
+    .contacto-correo__boton-1 {
+        display: none;
+    }
+    
+    .contacto-correo__boton-2 {
+        display: inline;
+        text-decoration: none;
+        text-align: center;
+        width: 243px;
+        height: 28px;
+        flex-shrink: 0;
+        color: #000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
+        font-family: Lexend Giga;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 119.49%; /* 23.898px */
+        letter-spacing: -1.7px;
+    }
+
+    
+
+  }
+
+
